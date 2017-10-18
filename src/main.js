@@ -126,31 +126,31 @@ class LINE extends Command {
         let receiver = messages.to;
         let sender = messages.from;
         
-        this.command('Halo', ['halo juga','ini siapa?']);
+        this.command('Help', ['Comand list\n\n=>> isi sendiri aja buat list comand']);
         this.command('kamu siapa', this.getProfile.bind(this));
-        this.command('.status', `Your Status: ${JSON.stringify(this.stateStatus)}`);
-        this.command(`.left ${payload}`, this.leftGroupByName.bind(this));
-        this.command('.speed', this.getSpeed.bind(this));
-        this.command('.kernel', this.checkKernel.bind(this));
-        this.command(`kick ${payload}`, this.OnOff.bind(this));
-        this.command(`cancel ${payload}`, this.OnOff.bind(this));
-        this.command(`qrp ${payload}`, this.OnOff.bind(this));
-        this.command(`.kickall ${payload}`,this.kickAll.bind(this));
-        this.command(`.cancelall ${payload}`, this.cancelMember.bind(this));
-        this.command(`.set`,this.setReader.bind(this));
-        this.command(`.recheck`,this.rechecks.bind(this));
-        this.command(`.clearall`,this.clearall.bind(this));
-        this.command('.myid',`Your ID: ${messages.from}`)
-        this.command(`.ip ${payload}`,this.checkIP.bind(this))
-        this.command(`.ig ${payload}`,this.checkIG.bind(this))
-        this.command(`.qr ${payload}`,this.qrOpenClose.bind(this))
-        this.command(`.joinqr ${payload}`,this.joinQr.bind(this));
-        this.command(`.spam ${payload}`,this.spamGroup.bind(this));
-        this.command(`.creator`,this.creator.bind(this));
+        this.command('Status', `Your Status: ${JSON.stringify(this.stateStatus)}`);
+        this.command(`left ${payload}`, this.leftGroupByName.bind(this));
+        this.command('Speed', this.getSpeed.bind(this));
+        this.command('Kernel', this.checkKernel.bind(this));
+        this.command(`Kick ${payload}`, this.OnOff.bind(this));
+        this.command(`Cancel ${payload}`, this.OnOff.bind(this));
+        this.command(`Qr ${payload}`, this.OnOff.bind(this));
+        this.command(`Kickall ${payload}`,this.kickAll.bind(this));
+        this.command(`Call ${payload}`, this.cancelMember.bind(this));
+        this.command('Point',this.setReader.bind(this));
+        this.command('Check',this.rechecks.bind(this));
+        this.command('Clear',this.clearall.bind(this));
+        this.command('Mid',`Your ID: ${messages.from}`)
+        this.command(`ip ${payload}`,this.checkIP.bind(this))
+        this.command(`ig ${payload}`,this.checkIG.bind(this))
+        this.command(`qr ${payload}`,this.qrOpenClose.bind(this))
+        this.command(`joinqr ${payload}`,this.joinQr.bind(this));
+        this.command(`Spam ${payload}`,this.spamGroup.bind(this));
+        this.command(`Creator`,this.creator.bind(this));
 
-        this.command(`pap ${payload}`,this.searchLocalImage.bind(this));
-        this.command(`.upload ${payload}`,this.prepareUpload.bind(this));
-        this.command(`vn ${payload}`,this.vn.bind(this));
+        this.command(`Pap ${payload}`,this.searchLocalImage.bind(this));
+        this.command(`Upload ${payload}`,this.prepareUpload.bind(this));
+        this.command(`Vn ${payload}`,this.vn.bind(this));
 
         if(messages.contentType == 13) {
             messages.contentType = 0;
